@@ -11,8 +11,9 @@ corr = raw_data.corr()
 # Save the correlation matrix to CSV
 corr.to_csv('correlation.csv')
 
-# Set up the matplotlib figure
-plt.figure(figsize=(6, 6))
+
+# Set up the matplotlib figure for 400x400 pixels (5x5 inches at 80 dpi)
+plt.figure(figsize=(5, 5), dpi=80)
 
 # Draw the heatmap with the red-white-green color map
 sns.heatmap(corr, annot=True, cmap='RdYlGn', center=0, fmt='.2f', square=True, cbar=True)
